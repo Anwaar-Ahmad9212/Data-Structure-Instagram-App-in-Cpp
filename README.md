@@ -76,15 +76,7 @@ This project is a micro-version of Instagram built using **C++** with fundamenta
 ## 📂 Installation & Usage
 ```bash
 # Clone the repository
-git clone https://github.com/Anwaar-Ahmad9212/Cpp-ContactManager.git
-
-# Navigate to the project directory
-cd Data-Structure-Instagram
-
-# Compile and run the program
-g++ main.cpp -o app
-./app
-```
+git clone https://github.com/Anwaar-Ahmad9212/Data-Structure-Instagram-App-in-Cpp
 
 ---
 
