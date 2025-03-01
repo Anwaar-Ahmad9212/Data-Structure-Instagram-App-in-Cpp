@@ -1,104 +1,112 @@
-# Data-Structure-Instagram-App-in-Cpp
-This project is a micro-version of Instagram built using C++ with fundamental data structures. It includes user management, messaging, friend requests, and notifications while utilizing linked lists, graphs, stacks, queues, and trees for efficient data handling
+# Data Structure Instagram App in C++
 
-🚀 Features & Functionalities
+## 📌 Overview
 
-1️⃣ User Profile & Management
+This project is a micro-version of Instagram built using **C++** with fundamental **data structures**. It includes user management, messaging, friend requests, and notifications while utilizing **linked lists, graphs, stacks, queues, and trees** for efficient data handling.
 
-Unique username & password authentication.
+🔹 **No built-in data structures** (like STL stack, queue, etc.) are used. All data structures are **implemented from scratch**.
 
-Additional attributes: City, Posts (with timestamps), Last login status.
+🔹 The system is designed to **mimic Instagram features**, such as **friend requests, messaging, notifications, and posts** while ensuring optimal performance and modular design.
 
-Graph-based relationships (Friend requests, Active/Blocked/Pending status).
+---
 
-2️⃣ Data Structures Used
+## 🚀 Features & Implemented Data Structures
 
-Feature
+### 🧑‍💻 User Profile (Linked List & Graph)
+- Each user is represented as a **node** with attributes:
+  - Name (Unique Identifier)
+  - Password (Login Authentication)
+  - City
+  - Posts (Date/Time, Text Content)
+  - Last Login Timestamp
+- **Friend Relationships** are represented as **graph edges**, including:
+  - Relation type (Friend, Blocked, Pending Request)
+  - Status Management
 
-Data Structure Used
+### 👥 User Network (Graph)
+- Users and their relationships are stored in an **adjacency list**.
+- **Graph traversal optimizations** help manage **friend suggestions & mutual friends**.
+- Username & password verification is done using **hash lookup**.
 
-User & Friend Network
+### ✉️ Messages (Stack)
+- Each conversation between two users is stored as a **stack**.
+- The **latest message is always at the top** for easy retrieval.
 
-Graph (Adjacency List)
+### 📝 Posts & Newsfeed (Stack)
+- Each user has a **separate post stack** for:
+  - Their own posts.
+  - Posts from followers (Newsfeed).
 
-Login Authentication
+### 🤝 Friend Requests (Queue)
+- Friend requests are managed using a **queue (FIFO order)**.
+- Ensures **oldest requests are handled first**.
 
-Hash Table (Pending Implementation)
+### 🔔 Notifications (Queue)
+- New friend requests, accepted requests, and received messages are **queued**.
+- Users can view notifications **in the order they arrived**.
 
-Messaging System
+### 🔍 Searching Users (Binary Search Tree - BST)
+- Users are stored in a **BST (sorted by username)**.
+- Search users in **O(log n) time complexity**.
 
-Stack (LIFO for latest message retrieval)
+### 📜 Menu Functionalities
+✅ **Signup/Login**: Secure user authentication & password reset.
+✅ **Follow Requests**: Manage requests & approvals.
+✅ **Friend Management**: Accept, reject, or cancel requests.
+✅ **Posting System**: Timeline to display posts from followers.
+✅ **Messaging System**: Send & receive messages in real time.
+✅ **Search Feature**: Efficient search using BST.
+✅ **Notifications**: Display unread messages, friend requests, and updates.
+✅ **Followers List**: View and manage followers.
+✅ **Newsfeed**: Display personal posts & posts from followers.
 
-Friend Requests
+### ⚡ Scalability & Future Enhancements
+- **Modular Design**: Separated into classes like `User`, `Followers`, `Messages` for easy expansion.
+- **Persistent Storage**: Data saved and loaded from files to prevent loss on crashes.
 
-Queue (FIFO for request processing)
+---
 
-Notifications
+## 🛠️ Technologies Used
+- **C++**
+- **Data Structures**: Linked Lists, Graphs, Stacks, Queues, Binary Search Trees (BST)
+- **File Handling** for data persistence
 
-Queue (FIFO for notification order)
+---
 
-Search Users
+## 📂 Installation & Usage
+```bash
+# Clone the repository
+git clone https://github.com/Anwaar-Ahmad9212/Cpp-ContactManager.git
 
-Binary Search Tree (BST) (O(log n) complexity)
+# Navigate to the project directory
+cd Data-Structure-Instagram
 
-3️⃣ Core Functionalities
+# Compile and run the program
+g++ main.cpp -o app
+./app
+```
 
-✅ Signup/Login System: Unique username validation & password strength enforcement.✅ Friend Requests: Pending requests handled using a Queue (FIFO).✅ Messaging: Private messaging feature using Stack-based chat storage.✅ Newsfeed & Posts: Posts stored using Stack, ensuring latest-first retrieval.✅ Search Users: Implemented using a Binary Search Tree (BST) for efficient lookup.✅ Notifications: Managed using a Queue, keeping events in order.✅ Graph Traversal for Friend Suggestions.
+---
 
-⚙️ Technologies Used
+## 📜 License
+This project is licensed under the **MIT License**. Feel free to use and modify it.
 
-C++ (No external libraries for data structures)
+---
 
-Object-Oriented Programming (OOP) principles
+## 🤝 Contributing
+Contributions are welcome! Follow these steps:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature-branch`)
+3. Commit changes (`git commit -m 'Added new feature'`)
+4. Push to the branch (`git push origin feature-branch`)
+5. Open a Pull Request
 
-Graph Data Structures (Adjacency List for Friend Network)
+---
 
-Queues & Stacks (For messaging & notifications)
+## 📞 Contact
+For any inquiries or issues, reach out via **GitHub Issues**.
 
-Binary Search Trees (For searching users efficiently)
+---
 
-📂 Project Structure
-
-📦 Data Structure Instagram App
- ┣ 📂 src
- ┃ ┣ 📜 main.cpp          # Main program file
- ┃ ┣ 📜 User.cpp          # User management & authentication
- ┃ ┣ 📜 Graph.cpp         # User relationships (friends, following, blocking)
- ┃ ┣ 📜 Stack.cpp         # Messaging & posts
- ┃ ┣ 📜 Queue.cpp         # Friend requests & notifications
- ┃ ┣ 📜 BST.cpp           # Searching users
- ┣ 📂 include             # Header files for modularity
- ┣ 📜 README.md           # Project documentation (You're reading it!)
- ┣ 📜 LICENSE             # License information
-
-🔧 Installation & Usage
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/YourUsername/DataStructure-Instagram.git
-cd DataStructure-Instagram
-
-2️⃣ Compile the Program
-
-g++ -o instagramApp src/main.cpp src/User.cpp src/Graph.cpp src/Stack.cpp src/Queue.cpp src/BST.cpp -I include
-
-3️⃣ Run the Application
-
-./instagramApp
-
-🛠 Future Improvements
-
-✅ Complete Hash Table implementation for authentication.
-
-🚀 Optimize Graph Traversal Algorithms for better friend suggestions.
-
-🔥 Implement File Handling for persistent storage of users, messages, and posts.
-
-📜 License
-
-This project is licensed under the MIT License – see the LICENSE file for details.
-
-👨‍💻 Contributing
-
-Contributions are always welcome! Feel free to fork this repository and submit a pull request.
+🔹 **Developed by Anwaar Ahmad**
 
