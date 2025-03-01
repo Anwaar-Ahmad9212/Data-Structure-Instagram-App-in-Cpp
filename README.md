@@ -77,7 +77,7 @@ This project is a micro-version of Instagram built using **C++** with fundamenta
 ```bash
 # Clone the repository
 git clone https://github.com/Anwaar-Ahmad9212/Data-Structure-Instagram-App-in-Cpp
-
+```
 ---
 
 ## 📜 License
